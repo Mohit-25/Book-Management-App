@@ -1,0 +1,35 @@
+<p>book-criteria works!</p>
+<ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options" ></ngx-slider> 
+    <div>Lower Range Value: {{value}}</div>
+    <div>High Range Value: {{highValue}}</div>
+
+<select [(ngModel)]="authorname" >
+    <option value="">Enter Name</option>
+    <option value="Yash">Yash</option>
+    <option value="Meet">Meet</option>
+    <option value="Darshit">Darshit</option>
+    <option va lue="Aakash">Aakash</option>
+</select>
+
+<button (click)="searchvalue()">Search</button>
+
+
+<table *ngIf="books" border="1">
+    <tr>
+        <th>bookId</th>
+        <th>name</th>
+        <th>price</th>
+        <th>qty</th>
+        <th>author</th>
+        <th>availableInd</th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td>{{book["bookId"]}}</td>
+        <td>{{book["name"]}}</td>
+        <td>{{book["price"]}}</td>
+        <td>{{book["qty"]}}</td>
+        <td>{{book["author"]}}</td>
+        <td>{{book["availableInd"]}}</td>
+    </tr>
+
+</table>

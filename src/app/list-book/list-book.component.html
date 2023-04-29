@@ -1,0 +1,31 @@
+<p>list-book works!</p>
+<ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options" (valueChange)="filterbook()"></ngx-slider> 
+    <div>Lower Range Value: {{value}}</div>
+    <div>High Range Value: {{highValue}}</div>
+
+
+<table *ngIf="books">
+    <tr>
+        <th>bookId</th>
+        <th>name</th>
+        <th>price</th>
+        <th>qty</th>
+        <th>author</th>
+        <th>availableInd</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td>{{book["bookId"]}}</td>
+        <td>{{book["name"]}}</td>
+        <td>{{book["price"]}}</td>
+        <td>{{book["qty"]}}</td>
+        <td>{{book["author"]}}</td>
+        <td>{{book["availableInd"]}}</td>
+        <td><button (click)="delete(book['bookId'])">Delete</button></td>
+    </tr>
+
+</table>  
+
+
+ 
+

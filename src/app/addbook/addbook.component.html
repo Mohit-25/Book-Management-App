@@ -1,0 +1,9 @@
+<p>addbook works!</p>
+Name:<input type="text"  [(ngModel)]="name"><br>
+Price:<input type="text" [(ngModel)]="price"><br>
+Quantity:<input type="number" [(ngModel)]="qty"><br>
+Author:<input type="text" [(ngModel)]="author"><br>
+AvailableInd:<input type="radio" [(ngModel)]="availableInd" value="true">True
+<input type="radio" [(ngModel)]="availableInd" value="false">False<br>
+
+<button (click)="addbook()" > Submit</button> <br>
